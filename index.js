@@ -26,6 +26,7 @@ function start(query) {
             
         });
     });
+    $('main').append(`${response.length} items`);
   }, function(reason) {
     console.log('Error: ' + reason.result.error.message);
   });
@@ -54,6 +55,7 @@ function youtubeSearch(query) {
             });
 
         });
+        $('main').append(`${response.length} items`);
     });
 }
 
