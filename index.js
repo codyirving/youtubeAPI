@@ -65,7 +65,7 @@ function youtubeSearch(query) {
 $('.submit-button').on('click', function(event) {
     event.preventDefault();
     $('.response').html("");
-    $('main').html("");
+ 
     const query = $('.search-input').val();
     console.log("QUERY: " + query);
     //youtubeSearch(query);
