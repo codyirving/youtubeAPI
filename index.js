@@ -16,7 +16,7 @@ function start(query) {
     })
   }).then(function(response) {
     //let obj = JSON.parse(response);
-    const responseLength = response.items.length;
+    const responseLength = response.result.items.length;
     $('.response').append(`${responseLength} items `);
     response.result.items.map(function (item, index, array) {
         //$('.response').append(`<a href=\'https://www.youtube.com/watch?v=${item.id.videoId}\'><img src=\'${item.snippet.thumbnails.medium.url}\'></a><br>`);
@@ -47,7 +47,7 @@ function youtubeSearch(query) {
         dataType: 'jsonp'
     }).done(function(response) {
         console.log(response);
-        const responseLength = response.items.length;
+        const responseLength = response.result.items.length;
         $('.response').append(`${responseLength} items `);
         response.items.map(function (item, index, array) {
             $('main').prop('hidden',false);
