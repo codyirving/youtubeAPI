@@ -19,6 +19,7 @@ function start(query) {
     //let response1 = response.items[1];
     response.result.items.map(function (item, index, array) {
         //$('.response').append(`<a href=\'https://www.youtube.com/watch?v=${item.id.videoId}\'><img src=\'${item.snippet.thumbnails.medium.url}\'></a><br>`);
+        $('main').prop('hidden',false);
         $('.response').append(`<a class=\'video-${index}' href=\'https://www.youtube.com/watch?v=${item.id.videoId}\'><img src=\'${item.snippet.thumbnails.medium.url}\'></a><br>`);
         $('.video-' + index).colorbox({
             href:`https://www.youtube.com/watch?v=${item.id.videoId}&accessToken=AIzaSyDO6ZTDyfrnrcUz1wmrXHVcLFE9fHBOTgw`,
