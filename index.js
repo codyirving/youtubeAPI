@@ -46,6 +46,7 @@ function youtubeSearch(query) {
         console.log(response);
         //let response1 = response.items[1];
         response.items.map(function (item, index, array) {
+            $('main').prop('hidden',false);
             $('.response').append(`<a class=\'video-${index}' href=\'https://www.youtube.com/watch?v=${item.id.videoId}\'><img src=\'${item.snippet.thumbnails.medium.url}\'></a><br>`);
             $('.video-' + index).colorbox({
                 href:`https://www.youtube.com/watch?v=${item.id.videoId}`
